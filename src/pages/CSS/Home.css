@@ -1,0 +1,164 @@
+.inner h2 {
+  color: #ebe2de;
+}
+h3 {
+  color: #508164;
+}
+
+.inner .introheader {
+  height: 150px;
+  padding: 30px;
+  background-color: #508164;
+}
+
+.inner .introheader h2 {
+  font-size: 30px;
+}
+
+.inner .introheader p {
+  position: relative;
+  color: white;
+  display: inline-block;
+  height: 21px;
+  overflow: hidden;
+  animation: typing 8s steps(40, end) infinite;
+}
+
+.inner .introheader p::after {
+  position: absolute;
+  display: block;
+  content: "";
+  animation: cursor 0.5s step-end infinite;
+}
+
+.inner .introskills h3,
+.inner .introprojects h3,
+.inner .introblog h3 {
+  font-size: 18px;
+}
+
+.inner .introskills p,
+.inner .introprojects p,
+.inner .introblog p {
+  font-size: 14px;
+}
+
+.inner .introskills p,
+.inner .introblog p {
+  color: var(--font-gray);
+}
+
+/* ------------------ 스킬셋 ------------------*/
+.inner .introskills {
+  height: 350px;
+  padding: 30px;
+}
+
+.inner .introskills .skillset .skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 226px;
+  height: 150px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgb(167, 167, 167, 0.5);
+  position: relative;
+}
+
+.skillset .skills img {
+  position: absolute;
+  top: -38px;
+  left: 72px;
+  width: 80px;
+  height: 80px;
+}
+
+.inner .introprojects {
+  height: 430px;
+  background-color: var(--main-gray);
+  padding: 30px;
+}
+
+.inner .introprojects .projectset .projectbox {
+  width: 450px;
+  height: 240px;
+  box-shadow: 2px 2px 10px rgb(167, 167, 167, 0.5);
+  background-color: #fff;
+  position: relative;
+}
+
+.projectset .projectbox .pro_caption {
+  position: absolute;
+  color: #fff;
+  top: 0px;
+  width: 450px;
+  height: 240px;
+  background-color: #8e6d6e;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.projectset .projectbox .pro_caption p {
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.projectset .projectbox .pro_caption p:first-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.projectset .projectbox .pro_caption button {
+  font-weight: bold;
+}
+
+.projectset .projectbox .pro_caption button:hover {
+  color: var(--main-color);
+}
+
+.projectset .projectbox:hover .pro_caption {
+  opacity: 1;
+  width: 225px;
+  transform: translateX(113px);
+}
+
+@media screen and (max-width: 1024px) {
+  .inner .introprojects .projectset .projectbox {
+    margin-bottom: 20px;
+  }
+
+  .inner .introprojects {
+    height: 700px;
+  }
+
+  .inner .introblog {
+    height: 490px;
+  }
+
+  .inner .introblog .blogbox {
+    width: 540px;
+  }
+
+  .inner .introblog .blogbox .blogentry {
+    width: 250px;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.text_emphasize {
+  color: #44564a;
+}
